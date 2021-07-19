@@ -1,0 +1,582 @@
+.header__container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    .container-fluid {
+        background: #fff;
+        .main__header {
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 60px;
+            max-height: 60px;
+            .header__logo__cont {
+                margin-top: 12px;
+                margin-left: 0;
+                float: left;
+                img {
+                    width: 152px;
+                    height: 22px;
+                }
+            }
+            .navigation__wrapper {
+                @media screen and (min-width: 1081px) {
+                    display: flex;
+                    justify-content: space-between;
+                    > div {
+                        display: flex;
+                        justify-content: space-between;
+                        .nav__items {
+                            display: flex;
+                            margin: 18px 0 0 24px;
+                            list-style: none;
+                            padding-left: 0;
+                            .nav_item {
+                                padding: 0 12px 19px;
+                                line-height: normal;
+                                position: relative;
+                                cursor: pointer;
+                                &.active_link {
+                                    &::after {
+                                        content: "";
+                                        height: 2px;
+                                        width: calc(100% - 24px);
+                                        bottom: 15px;
+                                        background-color: #582c83;
+                                        display: block;
+                                        position: absolute;
+                                    }
+                                }
+                                span {
+                                    font-size: 14px;
+                                    color: #582c83;
+                                }
+                                .mobile_nav_item {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .subnavigation__wrapper {
+                            position: absolute;
+                            width: 100%;
+                            max-width: 1080px;
+                            background: #fff;
+                            top: 60px;
+                            margin: auto;
+                            overflow: hidden;
+                            transform: translate3d(0, -200%, 0);
+                            transition: all 0.5s ease-out;
+                            z-index: -1;
+                            height: 85vh;
+                            max-height: 440px;
+
+                            &.active-meganav {
+                                transform: translateZ(0);
+                                max-height: 510px;
+                            }
+                            .subnavigation__container {
+                                display: none;
+                                box-shadow: inset 0 6px 4px -6px hsl(0deg, 0%, 85% / 50%);
+                                width: 100%;
+                                height: 100%;
+                                &.show-meganav {
+                                    display: flex;
+                                }
+                                .accordion,
+                                .subnav__title {
+                                    display: none;
+                                }
+
+                                .nav__submenu__list {
+                                    padding: 20px 0;
+                                    background-color: #f8f8f8;
+                                    box-shadow: inset 0 6px 4px -6px hsl(0deg, 0%, 85% / 50%);
+                                    margin: 0;
+                                    max-width: 280px;
+                                    width: 100%;
+                                    .nav__submenu__item {
+                                        &.active_menu {
+                                            background: #582c83;
+                                            span {
+                                                color: #fff;
+                                                &::after {
+                                                    position: absolute;
+                                                    right: 26px;
+                                                    top: 17px;
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 10px;
+                                                    height: 10px;
+                                                    border-top: 2px solid #fff;
+                                                    border-right: 2px solid #fff;
+                                                    transform: rotate(45deg) translateY(-50%);
+                                                    border-radius: 2px;
+                                                }
+                                            }
+                                        }
+                                        span {
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                            color: #000;
+                                            padding: 8px 0 8px 36px;
+                                            width: 100%;
+                                        }
+                                        &.active {
+                                            background-color: #582c83;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                .nav__nested-columns {
+                                    display: none;
+                                    width: 100%;
+                                    padding: 20px 30px;
+                                    overflow: hidden;
+                                    flex-wrap: wrap;
+                                    justify-content: start;
+                                    &.showcolumn {
+                                        display: flex;
+                                    }
+                                    .nav_nested_submenu {
+                                        float: left;
+                                        margin: 0;
+                                        height: 100%;
+                                        overflow-y: hidden;
+                                        padding-right: 30px;
+                                        padding-left: 0;
+                                        max-width: 370px;
+                                        width: 100%;
+                                        li {
+                                            padding: 12px 25px;
+                                            cursor: pointer;
+                                            display: flex;
+                                            flex-direction: column;
+                                            &:hover {
+                                                background: #f2f2f2;
+                                            }
+                                            a {
+                                                display: inline-block;
+                                                h6 {
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    font-weight: 900;
+                                                    color: #582c83;
+                                                    display: inline-block;
+                                                }
+
+                                                div {
+                                                    p {
+                                                        font-size: 14px;
+                                                        line-height: 22px;
+                                                        color: #000;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.with__big__image {
+                                            padding-left: 0 !important;
+                                            li {
+                                                padding: 0;
+                                                a {
+                                                    img {
+                                                        max-height: 256px;
+                                                        min-height: 256px;
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.with_image {
+                                            border-left: 1px solid var(--gray);
+                                            padding-left: 29px;
+                                            padding-right: 0;
+                                            .img_container {
+                                                a {
+                                                    img {
+                                                        max-height: 218px;
+                                                        min-height: 218px;
+                                                        margin-bottom: 10px;
+                                                    }
+                                                }
+                                            }
+                                            .title {
+                                                font-size: 16px;
+                                                line-height: 24px;
+                                                color: #582c83;
+                                                margin-top: 10px;
+                                                & + div {
+                                                    margin-top: 10px;
+                                                    p {
+                                                        font-size: 14px;
+                                                        line-height: 22px;
+                                                        color: #000;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                // }
+                            }
+                        }
+                    }
+                    .nav__actions_container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-height: 60px;
+                        .nav_schedule_contn {
+                            margin: 5px 24px 0 0;
+                            .one-button {
+                                font-size: 15px;
+                                display: block;
+                                min-width: 220px !important;
+                            }
+                            .mobile__hide {
+                                display: none;
+                            }
+                        }
+                        .patient__login,
+                        .normal__login {
+                            margin: 5px 14px 0 0;
+                            a {
+                                display: block;
+                                float: right;
+                                font-size: 14px;
+                                line-height: normal;
+                                color: #582c83;
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: 1081px) {
+                    position: fixed;
+                    background: #fff;
+                    right: -100%;
+                    max-width: 100%;
+                    width: 100%;
+                    height: calc(100% - 59px);
+                    transition: all 0.75s ease;
+                    z-index: 10;
+                    top: 60px;
+                    overflow-y: auto;
+                    box-shadow: inset 0 0 2px 0 hsla(0, 0%, 85%, 0.5);
+                    &.open_nav {
+                        right: 0;
+                    }
+                    .nav__items {
+                        margin: 0 0 19px;
+                        .nav_item {
+                            position: relative;
+                            .mobile_nav_item {
+                                display: block;
+                                color: #582c83;
+                                font-size: 14px;
+                                cursor: pointer;
+                                line-height: 1.38;
+                                min-height: 41px;
+                                border-bottom: 1px solid #d8d8d8;
+                                padding: 10px 63px 8px 51px;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 14px;
+                                    right: 35px;
+                                    display: inline-block;
+                                    width: 12px;
+                                    height: 12px;
+                                    border-top: 2px solid #582c83;
+                                    border-right: 2px solid #582c83;
+                                    transform: rotate(45deg);
+                                    border-radius: 2px;
+                                }
+                            }
+                            .desktop_nav_item {
+                                display: none;
+                            }
+                        }
+                    }
+                    .nav__actions_container {
+                        .nav_schedule_contn {
+                            padding: 0 63px 17px 77px;
+                            border: solid #d8d8d8;
+                            border-width: 0 0 1px;
+                            .mobile__hide {
+                                display: block;
+                                margin-bottom: 3px;
+                                font-size: 16px;
+                            }
+                            .desktop__hide {
+                                display: none;
+                            }
+                        }
+                        .normal__login,
+                        .patient__login {
+                            overflow: hidden;
+                            border: solid #d8d8d8;
+                            border-width: 1px 0;
+                            border-width: 0 0 1px;
+                            margin-top: 0;
+                            position: relative;
+                            a {
+                                display: block;
+                                padding: 10px 63px 8px 51px;
+                                line-height: 1.38;
+                                color: #582c83;
+                                float: none;
+                                margin: 0;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .subnavigation__wrapper {
+                        overflow: hidden;
+                        .subnavigation__container {
+                            position: fixed;
+                            background: #fff;
+                            right: -100%;
+                            max-width: 100%;
+                            width: 100%;
+                            height: calc(100% - 59px);
+                            transition: all 0.75s ease;
+                            z-index: 10;
+                            top: 60px;
+                            overflow-y: auto;
+                            box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 85%, 0.5);
+                            .nav__submenu__list,
+                            .nav__nested-columns {
+                                display: none;
+                            }
+                            &.show-meganav {
+                                right: 0;
+                                overflow: hidden;
+                            }
+                            .subnav__title {
+                                font-size: 14px;
+                                line-height: 1.38;
+                                color: #582c83;
+                                padding: 10px 51px 8px;
+                                border-bottom: 1px solid #d8d8d8;
+                                position: relative;
+                                cursor: pointer;
+                                &::before {
+                                    position: absolute;
+                                    bottom: 13px;
+                                    left: 36px;
+                                    content: "";
+                                    display: inline-block;
+                                    width: 12px;
+                                    height: 12px;
+                                    border-top: 2px solid #582c83;
+                                    border-right: 2px solid #582c83;
+                                    transform: rotate(-135deg);
+                                    border-radius: 2px;
+                                }
+                            }
+                            .accordion {
+                                .card {
+                                    border: 0;
+                                    border-radius: 0;
+                                    .card-header {
+                                        display: flex;
+                                        position: relative;
+                                        cursor: pointer;
+                                        border-bottom: 1px solid #d8d8d8;
+                                        border-radius: 0;
+                                        padding: 0;
+                                        margin: 0;
+                                        span {
+                                            margin-left: 50px;
+                                            min-width: calc(100% - 50px);
+                                            padding: 10px 65px 8px 1px;
+                                            line-height: 24px;
+                                            width: 100%;
+                                            font-size: 14px;
+                                            color: #582c83;
+                                            &::after {
+                                                right: 32px;
+                                                top: 12px;
+                                                content: "";
+                                                border-top: 2px solid #582c83;
+                                                border-right: 2px solid #582c83;
+                                                transform: rotate(135deg);
+                                                width: 12px;
+                                                height: 12px;
+                                                position: absolute;
+                                                transition: all 0.2s ease;
+                                                border-radius: 2px;
+                                            }
+                                        }
+                                        &.arrow-up {
+                                            background-color: #582c83;
+                                            color: #fff;
+                                            span::after {
+                                                border-color: #fff;
+                                                top: 18px;
+                                                transform: rotate(-45deg);
+                                            }
+                                        }
+                                    }
+                                    .card-body {
+                                        border: 0;
+                                        border-radius: 0;
+                                        background-color: #f8f8f8;
+                                        padding: 6px 31px 15px;
+                                        flex: 1 1 auto;
+                                        .submenu-title {
+                                            font-size: 14px;
+                                            line-height: 1.38;
+                                            color: #582c83;
+                                            a {
+                                                font-size: 14px;
+                                                line-height: 2.5;
+                                                color: #582c83;
+                                                border-bottom: 1px solid #d8d8d8;
+                                                display: block;
+                                                padding: 0 0 8px 20px;
+                                            }
+                                        }
+                                        .nav-submenu-wrap {
+                                            padding: 10px 0 9px;
+                                            margin-bottom: 0;
+                                            &:last-child {
+                                                border-top: 1px solid #d8d8d8;
+                                                padding-top: 17px;
+                                                li {
+                                                    > div {
+                                                        margin-top: -1px;
+                                                        p {
+                                                            font-size: 12px;
+                                                            line-height: 1.38;
+                                                            color: #000;
+                                                            margin: 0;
+                                                            margin-bottom: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            li {
+                                                margin: 0 0 0 20px;
+                                                a {
+                                                    font-size: 14px;
+                                                    line-height: 2.5;
+                                                    color: #582c83;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .subnavigation__wrapper {
+                    .nav__submenu__item {
+                        display: flex;
+                        position: relative;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .mobile__menu__button {
+                @media screen and (min-width: 1080px) {
+                    display: none;
+                }
+                @media screen and (max-width: 1080px) {
+                    padding: 22px 31px 14px;
+                    border-left: 1px solid #d8d8d8;
+                    cursor: pointer;
+                    float: right;
+                    .hamburger-cont {
+                        width: 24px;
+                        height: 24px;
+                        position: relative;
+                        transition: 0.5s ease-in-out;
+                        z-index: 11;
+                        float: left;
+                        margin-right: 10px;
+                        span {
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 3px;
+                            background-color: #582c83;
+                            border-radius: 9px;
+                            opacity: 1;
+                            left: 0;
+                            transition: all 0.5s ease;
+                            border-radius: 0;
+                            &:first-child {
+                                top: 0;
+                            }
+                            &:nth-child(2) {
+                                top: 10px;
+                                width: 18px;
+                            }
+                            &:last-child {
+                                top: 20px;
+                            }
+                        }
+                    }
+                    .title {
+                        float: left;
+                        line-height: 1.5;
+                        margin-right: -1px;
+                        font-size: 14px;
+                        color: #582c83;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        margin: 0;
+                        margin-bottom: 0;
+                    }
+                    &.active {
+                        border: 0;
+                        padding: 23px 27px 16px;
+                        .hamburger-cont {
+                            margin: 0;
+                            width: 20.6px;
+                            height: 20.6px;
+                            span {
+                                height: 1.5px;
+
+                                border-radius: 0;
+                                &:first-child {
+                                    transform: rotate(45deg);
+                                    top: 50%;
+                                }
+                                &:nth-child(2) {
+                                    width: 0;
+                                    opacity: 0;
+                                }
+                                &:last-child {
+                                    transform: rotate(-45deg);
+                                    top: 50%;
+                                }
+                            }
+                        }
+                        .title {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .navigation__wrapper__overlay {
+                display: none;
+                background: rgba(0, 0, 0, 0.4);
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 61px;
+                left: 0;
+                z-index: -9;
+            }
+        }
+    }
+}
