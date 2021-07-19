@@ -413,11 +413,15 @@
                                         &.arrow-up {
                                             background-color: #582c83;
                                             color: #fff;
-                                            span::after {
-                                                border-color: #fff;
-                                                top: 18px;
-                                                transform: rotate(-45deg);
+                                            span{
+                                                color: #fff;
+                                                &::after {
+                                                    border-color: #fff;
+                                                    top: 18px;
+                                                    transform: rotate(-45deg);
+                                                }
                                             }
+                                           
                                         }
                                     }
                                     .card-body {

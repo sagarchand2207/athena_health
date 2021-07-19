@@ -746,7 +746,7 @@ const Header = () => {
                         <Card.Body>
                           <ul class="nav-submenu-wrap">
                             <li>
-                              <Link to="/">Who We are</Link>
+                              <Link to="/who-we">Who We are</Link>
                             </li>
                           </ul>
                           <ul class="nav-submenu-wrap">
@@ -810,7 +810,7 @@ const Header = () => {
                   >
                     <ul class="nav_nested_submenu with_image with__big__image">
                       <li>
-                        <Link to="/">
+                        <Link to="/who-we">
                           <img
                             class="ahMegaNav__media--37axm"
                             src="https://caas.athenahealth.com/sites/default/files/IMG_who-we-are-graphic_Teal_DGT.jpg"
