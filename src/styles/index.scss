@@ -1,0 +1,118 @@
+@import "./footer.scss";
+@import "./slider.scss";
+@import "./slider_card.scss";
+@import "./home.scss";
+@import "./header.scss";
+@import "./who_we.scss";
+@import "./sliderarrowbtn.scss";
+@import "./modal.scss";
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$open-sans: "Open Sans", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    font-family: $open-sans;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1080px;
+}
+
+[class~="container"] {
+    max-width: 1080px;
+}
+
+[class~="container-fluid"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.one-button {
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    width: fit-content !important;
+    cursor: pointer;
+    min-width: 180px !important;
+    font-size: 18px;
+    line-height: 40px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    background-color: #62bb26;
+    color: #ffff !important;
+}
+
+strong {
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: inherit;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 1079px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+@media screen and (min-width: 1080px) {
+    .desktop-hide {
+        display: none;
+    }
+}
+@media screen and (min-width: 1081px) {
+    .desktop-hide {
+        display: none;
+    }
+}
