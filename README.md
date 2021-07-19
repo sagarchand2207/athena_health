@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# About the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please note the image's that are being used are from athenahealth.com, I directly copy the url and paste it, so might see a bit delay when the banner images get loaded. I have also configure a static Page for routing purpose and to get there simply hover on about and click on the 'We are athenahealth' image. and in mobile menu click on About --> Who we are --> click on 'Who we are'.
+
+I have also added the slider for the cards and added a modal that opens when you hover on the cards and click 'Play'. The modal closes on outside click or esc button press. If ypu want a close button then simply pass the 'closeButton' to the Modal component and it will show the close icon. 
+
+Bootstap is only being used for the collapsible accordion that you will see on smaller screen for both header and footer. Other than that the nav menu interaction is being done by JS and CSS.  
 
 ## Available Scripts
 

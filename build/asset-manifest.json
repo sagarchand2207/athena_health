@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cbafc783.chunk.css",
+    "main.js": "/static/js/main.09030afe.chunk.js",
+    "main.js.map": "/static/js/main.09030afe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b98df91c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b98df91c.js.map",
+    "static/js/2.f94bd44a.chunk.js": "/static/js/2.f94bd44a.chunk.js",
+    "static/js/2.f94bd44a.chunk.js.map": "/static/js/2.f94bd44a.chunk.js.map",
+    "static/js/3.5d3efadc.chunk.js": "/static/js/3.5d3efadc.chunk.js",
+    "static/js/3.5d3efadc.chunk.js.map": "/static/js/3.5d3efadc.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.cbafc783.chunk.css.map": "/static/css/main.cbafc783.chunk.css.map",
+    "static/js/2.f94bd44a.chunk.js.LICENSE.txt": "/static/js/2.f94bd44a.chunk.js.LICENSE.txt",
+    "static/media/child.0b089506.jpeg": "/static/media/child.0b089506.jpeg",
+    "static/media/doctor.31d4ba64.jpeg": "/static/media/doctor.31d4ba64.jpeg",
+    "static/media/doctorApp.d12fbfed.jpeg": "/static/media/doctorApp.d12fbfed.jpeg",
+    "static/media/doctor_mobile.d3d13787.jpeg": "/static/media/doctor_mobile.d3d13787.jpeg",
+    "static/media/other.9f099385.jpg": "/static/media/other.9f099385.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b98df91c.js",
+    "static/js/2.f94bd44a.chunk.js",
+    "static/css/main.cbafc783.chunk.css",
+    "static/js/main.09030afe.chunk.js"
+  ]
+}
